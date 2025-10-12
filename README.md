@@ -10,4 +10,4 @@
 
 Демонстрация игры "Проверка на чётность"
 
-https://asciinema.org/a/4WFCHM4BUlk3b1EwaJMfRN1Nd
+<script src="https://asciinema.org/a/4WFCHM4BUlk3b1EwaJMfRN1Nd.js" id="asciicast-4WFCHM4BUlk3b1EwaJMfRN1Nd" async="true"></script>
