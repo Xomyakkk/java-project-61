@@ -1,46 +1,31 @@
 package hexlet.code;
 
-import java.util.Scanner;
+import static hexlet.code.Engine.COUNT_QUESTION;
+import static hexlet.code.Engine.checkingAnswers;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Even {
     public static void even(){
-        int countQuestion = 3;
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
-
-        Scanner input = new Scanner(System.in);
-        String name = input.nextLine();
-
-        System.out.println("Hello, " + name + "!");
+        Engine.greet();
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for (int i = 1; i <= countQuestion; i++) {
-            int randomNumber = (int)(Math.random() * 100) + 1;
-            String even;
+        // Генератор вопросов и ответов
 
-            if (randomNumber % 2 == 0) {
-                even = "yes";
-            } else {
-               even = "no";
-            }
+        String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
-            System.out.println("Question: " + randomNumber);
+        for (int i = 0; i < COUNT_QUESTION; i++) {
+            int randomNumber = ThreadLocalRandom.current().nextInt(1, 101);
 
-            //Scanner input = new Scanner(System.in);
-            String answer = input.nextLine();
+            String even = (randomNumber % 2 == 0) ? "yes" : "no";
+            String question = Integer.toString(randomNumber);
 
-            System.out.println("Your answer: " + answer);
-
-            if (answer.equals(even)) {
-                System.out.println("Correct!");
-            } else  {
-                System.out.println("'" + answer + "' " + "is wrong answer ;(. Correct answer was" + " '" + even + "' \n" +
-                        "Let's try again, " + name + "!");
-                return;
-            }
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][1] = even;
         }
 
-        System.out.println("Congratulations, " + name + "!");
+        // Передаем массив с готовыми вопросами и ответами
+        checkingAnswers(questionsAndAnswers);
     }
 }
