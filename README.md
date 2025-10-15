@@ -6,3 +6,8 @@
 
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Xomyakkk_java-project-61)](https://sonarcloud.io/summary/new_code?id=Xomyakkk_java-project-61)
+
+
+Демонстрация игры "Проверка на чётность"
+
+<a href="https://asciinema.org/a/4WFCHM4BUlk3b1EwaJMfRN1Nd" target="_blank"><img src="https://asciinema.org/a/4WFCHM4BUlk3b1EwaJMfRN1Nd.svg" /></a>
