@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import static hexlet.code.Calc.calc;
 import static hexlet.code.Cli.greetings;
+import static hexlet.code.Gsd.gcd;
 
 public class App {
     public static void main(String[] args) {
@@ -12,10 +13,11 @@ public class App {
     public static void menu(){
         System.out.println("""
                 Please enter the game number end press Enter.
-                1. Greet
-                2. Even
-                3. Calc
-                4. Exit""");
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - GCD
+                0 -  Exit""");
 
         Scanner input = new Scanner(System.in);
         String choice = input.nextLine();
@@ -30,6 +32,9 @@ public class App {
                 break;
             case "3":
                 calc();
+                break;
+            case "4":
+                gcd();
                 break;
             case "0":
                 break;
