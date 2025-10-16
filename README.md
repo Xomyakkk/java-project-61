@@ -16,3 +16,7 @@
 Демонстрация игры "Калькулятор"
 
 <a href="https://asciinema.org/a/irQCl8l2GvsjpqC0QhmzQXkTm" target="_blank"><img src="https://asciinema.org/a/irQCl8l2GvsjpqC0QhmzQXkTm.svg" /></a>
+
+Демонстрация игры "НОД"
+
+<a href="https://asciinema.org/a/PP9ZlhnLEHTMI5fjZvDnsZ4iS" target="_blank"><img src="https://asciinema.org/a/PP9ZlhnLEHTMI5fjZvDnsZ4iS.svg" /></a>
