@@ -11,3 +11,8 @@
 Демонстрация игры "Проверка на чётность"
 
 <a href="https://asciinema.org/a/4WFCHM4BUlk3b1EwaJMfRN1Nd" target="_blank"><img src="https://asciinema.org/a/4WFCHM4BUlk3b1EwaJMfRN1Nd.svg" /></a>
+
+
+Демонстрация игры "Калькулятор"
+
+<a href="https://asciinema.org/a/irQCl8l2GvsjpqC0QhmzQXkTm" target="_blank"><img src="https://asciinema.org/a/irQCl8l2GvsjpqC0QhmzQXkTm.svg" /></a>
