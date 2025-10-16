@@ -10,11 +10,12 @@ public class App {
         menu();
     }
     public static void menu(){
-        System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("0 - Exit");
+        System.out.println("""
+                Please enter the game number end press Enter.
+                1. Greet
+                2. Even
+                3. Calc
+                4. Exit""");
 
         Scanner input = new Scanner(System.in);
         String choice = input.nextLine();
