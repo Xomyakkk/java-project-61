@@ -19,7 +19,9 @@ public class Progression {
             int start = ThreadLocalRandom.current().nextInt(1, 50);
             int step = ThreadLocalRandom.current().nextInt(1, 10);
             int length = ThreadLocalRandom.current().nextInt(6, 10);
-            int removeIndex =  ThreadLocalRandom.current().nextInt(length); // Случайно выбираем позицию спрятанного элемента
+
+            // Случайно выбираем позицию спрятанного элемента
+            int removeIndex =  ThreadLocalRandom.current().nextInt(length);
 
             String[] progression = getProgression(start, length, step); // Получаем прогрессию
             questionsAndAnswers[i][1] = progression[removeIndex]; // Выбираем элемент в качестве ответа

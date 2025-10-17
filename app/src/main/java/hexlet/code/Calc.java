@@ -6,7 +6,7 @@ import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
 
 public class Calc {
-    public static void calc(){
+    public static void calc() {
         Engine.greet();
 
         System.out.println("What is the result of the expression?");
@@ -33,6 +33,8 @@ public class Calc {
                 case 3:
                     questionsAndAnswers[i][0] = a + " * " + b;
                     questionsAndAnswers[i][1] = Integer.toString(a * b);
+                    break;
+                default:
                     break;
             }
         }

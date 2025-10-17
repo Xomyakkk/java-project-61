@@ -31,8 +31,9 @@ public class Engine {
             if (answer.equals(playerAnswer)) {
                 System.out.println("Correct!");
             } else  {
-                System.out.println("'" + playerAnswer + "' " + "is wrong answer ;(. Correct answer was" + " '" + answer + "' \n" +
-                        "Let's try again, " + playerName + "!");
+                System.out.println("'" + playerAnswer + "' " + "is wrong answer ;(. "
+                        + "Correct answer was" + " '" + answer + "' \n"
+                        + "Let's try again, " + playerName + "!");
                 return;
             }
         }

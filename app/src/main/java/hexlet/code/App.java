@@ -12,7 +12,7 @@ public class App {
     public static void main(String[] args) {
         menu();
     }
-    public static void menu(){
+    public static void menu() {
         System.out.println("""
                 Please enter the game number end press Enter.
                 1 - Greet
@@ -27,7 +27,7 @@ public class App {
         String choice = input.nextLine();
         System.out.println("Your choice: " + choice);
 
-        switch(choice) {
+        switch (choice) {
             case "1":
                 greetings();
                 break;

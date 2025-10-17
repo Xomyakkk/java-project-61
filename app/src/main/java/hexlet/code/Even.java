@@ -6,7 +6,7 @@ import static hexlet.code.Engine.checkingAnswers;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Even {
-    public static void even(){
+    public static void even() {
         Engine.greet();
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
