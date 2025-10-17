@@ -24,3 +24,7 @@
 Демонстрация игры "Арифметическая прогрессия"
 
 <a href="https://asciinema.org/a/iT9yEy0o8vH5LCzUdBayRT6T9" target="_blank"><img src="https://asciinema.org/a/iT9yEy0o8vH5LCzUdBayRT6T9.svg" /></a>
+
+Демонстрация игры "Простое ли число?"
+
+<a href="https://asciinema.org/a/fOFAuuUR4xmhtrsulNLN8vMyo" target="_blank"><img src="https://asciinema.org/a/fOFAuuUR4xmhtrsulNLN8vMyo.svg" /></a>
