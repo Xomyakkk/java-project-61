@@ -20,3 +20,7 @@
 Демонстрация игры "НОД"
 
 <a href="https://asciinema.org/a/PP9ZlhnLEHTMI5fjZvDnsZ4iS" target="_blank"><img src="https://asciinema.org/a/PP9ZlhnLEHTMI5fjZvDnsZ4iS.svg" /></a>
+
+Демонстрация игры "Арифметическая прогрессия"
+
+<a href="https://asciinema.org/a/iT9yEy0o8vH5LCzUdBayRT6T9" target="_blank"><img src="https://asciinema.org/a/iT9yEy0o8vH5LCzUdBayRT6T9.svg" /></a>
