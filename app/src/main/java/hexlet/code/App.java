@@ -5,6 +5,7 @@ import java.util.Scanner;
 import static hexlet.code.Calc.calc;
 import static hexlet.code.Cli.greetings;
 import static hexlet.code.Gsd.gcd;
+import static hexlet.code.Prime.prime;
 import static hexlet.code.Progression.progression;
 
 public class App {
@@ -19,6 +20,7 @@ public class App {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 -  Exit""");
 
         Scanner input = new Scanner(System.in);
@@ -40,6 +42,9 @@ public class App {
                 break;
             case "5":
                 progression();
+                break;
+            case "6":
+                prime();
                 break;
             case "0":
                 break;
