@@ -6,9 +6,9 @@ import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
-import java.util.concurrent.ThreadLocalRandom;
+public final class Even {
+    private Even() { }
 
-public class Even {
     public static void even() {
         final String messageQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 

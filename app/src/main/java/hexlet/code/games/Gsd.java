@@ -2,13 +2,13 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
-public class Gsd {
+public final class Gsd {
+    private Gsd() { }
+
     public static void gcd() {
         final String messageQuestion = "Find the greatest common divisor of given numbers.";
 

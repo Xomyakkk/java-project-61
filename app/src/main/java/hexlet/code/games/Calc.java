@@ -6,7 +6,9 @@ import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
-public class Calc {
+public final class Calc {
+    private Calc() { }
+
     public static void calc() {
         final String messageQuestion = "What is the result of the expression?";
 

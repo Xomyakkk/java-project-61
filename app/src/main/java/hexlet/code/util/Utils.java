@@ -2,7 +2,8 @@ package hexlet.code.util;
 
 import static java.util.concurrent.ThreadLocalRandom.current;
 
-public class Utils {
+public final class Utils {
+    private Utils() { }
 
     // Минимальное и максимальное значение по умолчанию (1..100)
     public static final int DEFAULT_MIN = 1;

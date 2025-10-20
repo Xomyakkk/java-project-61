@@ -2,7 +2,9 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
+    private Engine() { }
+
     private static String playerName;
 
     public static final int COUNT_QUESTION = 3;

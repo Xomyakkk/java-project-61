@@ -2,22 +2,22 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
-public class Progression {
+public final class Progression {
+    private Progression() { }
+
     public static void progression() {
-        final int START_MIN   = 1;
-        final int START_MAX   = 50;
+        final int startMin   = 1;
+        final int startMax   = 50;
 
-        final int STEP_MIN    = 1;
-        final int STEP_MAX    = 10;
+        final int stepMin    = 1;
+        final int stepMax    = 10;
 
-        final int LENGTH_MIN  = 6;
-        final int LENGTH_MAX  = 10;
+        final int lengthMin  = 6;
+        final int lengthMax  = 10;
         final String messageQuestion = "What number is missing in the progression?";
 
         Engine.greet(messageQuestion);
@@ -27,9 +27,9 @@ public class Progression {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int start = generateNumber(START_MIN,  START_MAX);
-            int step = generateNumber(STEP_MIN,  STEP_MAX);
-            int length = generateNumber(LENGTH_MIN,  LENGTH_MAX);
+            int start = generateNumber(startMin,  startMax);
+            int step = generateNumber(stepMin,  stepMax);
+            int length = generateNumber(lengthMin,  lengthMax);
 
             // Случайно выбираем позицию спрятанного элемента
             int removeIndex = generateNumber(length);
