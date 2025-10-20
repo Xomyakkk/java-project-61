@@ -6,6 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.Utils.generateNumber;
 
 public class Gsd {
     public static void gcd() {
@@ -18,8 +19,8 @@ public class Gsd {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int a = ThreadLocalRandom.current().nextInt(1, 101);
-            int b = ThreadLocalRandom.current().nextInt(1, 101);
+            int a = generateNumber();
+            int b = generateNumber();
 
             questionsAndAnswers[i][0] = a + " " + b;
 

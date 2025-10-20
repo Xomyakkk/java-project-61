@@ -2,10 +2,9 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.Utils.generateNumber;
 
 public class Calc {
     public static void calc() {
@@ -18,10 +17,10 @@ public class Calc {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int a = ThreadLocalRandom.current().nextInt(1, 101);
-            int b = ThreadLocalRandom.current().nextInt(1, 101);
+            int a = generateNumber();
+            int b = generateNumber();
 
-            int c = ThreadLocalRandom.current().nextInt(1, 3);
+            int c = generateNumber(1, 3);
 
             switch (c) {
                 case 1:

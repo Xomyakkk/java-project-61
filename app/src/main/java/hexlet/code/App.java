@@ -22,7 +22,7 @@ public class App {
                 4 - GCD
                 5 - Progression
                 6 - Prime
-                0 -  Exit""");
+                0 - Exit""");
 
         Scanner input = new Scanner(System.in);
         String choice = input.nextLine();

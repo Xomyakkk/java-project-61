@@ -6,9 +6,18 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.Utils.generateNumber;
 
 public class Progression {
     public static void progression() {
+        final int START_MIN   = 1;
+        final int START_MAX   = 50;
+
+        final int STEP_MIN    = 1;
+        final int STEP_MAX    = 10;
+
+        final int LENGTH_MIN  = 6;
+        final int LENGTH_MAX  = 10;
         final String messageQuestion = "What number is missing in the progression?";
 
         Engine.greet(messageQuestion);
@@ -18,12 +27,12 @@ public class Progression {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int start = ThreadLocalRandom.current().nextInt(1, 50);
-            int step = ThreadLocalRandom.current().nextInt(1, 10);
-            int length = ThreadLocalRandom.current().nextInt(6, 10);
+            int start = generateNumber(START_MIN,  START_MAX);
+            int step = generateNumber(STEP_MIN,  STEP_MAX);
+            int length = generateNumber(LENGTH_MIN,  LENGTH_MAX);
 
             // Случайно выбираем позицию спрятанного элемента
-            int removeIndex =  ThreadLocalRandom.current().nextInt(length);
+            int removeIndex = generateNumber(length);
 
             String[] progression = getProgression(start, length, step); // Получаем прогрессию
             questionsAndAnswers[i][1] = progression[removeIndex]; // Выбираем элемент в качестве ответа

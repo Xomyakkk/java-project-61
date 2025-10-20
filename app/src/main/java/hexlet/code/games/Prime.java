@@ -6,9 +6,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.Utils.generateNumber;
 
 public class Prime {
-    public static void prime() {
+    public static void prime() {;
         final String messageQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         Engine.greet(messageQuestion);
@@ -18,7 +19,7 @@ public class Prime {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int randomNumber = ThreadLocalRandom.current().nextInt(1, 101);
+            int randomNumber = generateNumber();
 
             boolean prime = checkingPrime(randomNumber);
 

@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.Utils.generateNumber;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -18,7 +19,7 @@ public class Even {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int randomNumber = ThreadLocalRandom.current().nextInt(1, 101);
+            int randomNumber = generateNumber();
 
             String even = (randomNumber % 2 == 0) ? "yes" : "no";
             String question = Integer.toString(randomNumber);
