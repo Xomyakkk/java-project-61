@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -7,9 +9,9 @@ import static hexlet.code.Engine.checkingAnswers;
 
 public class Progression {
     public static void progression() {
-        Engine.greet();
+        final String messageQuestion = "What number is missing in the progression?";
 
-        System.out.println("What number is missing in the progression?");
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 

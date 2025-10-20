@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -7,9 +9,9 @@ import static hexlet.code.Engine.checkingAnswers;
 
 public class Gsd {
     public static void gcd() {
-        Engine.greet();
+        final String messageQuestion = "Find the greatest common divisor of given numbers.";
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 

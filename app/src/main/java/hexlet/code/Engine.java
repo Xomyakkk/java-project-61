@@ -7,14 +7,16 @@ public class Engine {
 
     public static final int COUNT_QUESTION = 3;
 
-    public static void greet() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
+    public static void greet(String gameQuestion) {
+        System.out.println("""
+                Welcome to the Brain Games!
+                May I have your name?""");
 
         Scanner input = new Scanner(System.in);
         playerName = input.nextLine();
 
         System.out.println("Hello, " + playerName + "!");
+        System.out.println(gameQuestion);
     }
 
     public static void checkingAnswers(String[][] questionsAndAnswers) {

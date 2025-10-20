@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
@@ -7,9 +9,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Even {
     public static void even() {
-        Engine.greet();
+        final String messageQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 

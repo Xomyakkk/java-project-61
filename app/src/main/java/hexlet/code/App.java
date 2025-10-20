@@ -2,11 +2,12 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-import static hexlet.code.Calc.calc;
-import static hexlet.code.Cli.greetings;
-import static hexlet.code.Gsd.gcd;
-import static hexlet.code.Prime.prime;
-import static hexlet.code.Progression.progression;
+import hexlet.code.games.Even;
+import static hexlet.code.games.Calc.calc;
+import static hexlet.code.games.Cli.greetings;
+import static hexlet.code.games.Gsd.gcd;
+import static hexlet.code.games.Prime.prime;
+import static hexlet.code.games.Progression.progression;
 
 public class App {
     public static void main(String[] args) {
@@ -49,7 +50,7 @@ public class App {
             case "0":
                 break;
             default:
-                System.out.println("Invalid input");
+                System.out.println("Unknown user choice " + choice);
                 menu();
                 break;
         }

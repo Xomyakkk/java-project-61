@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -7,9 +9,9 @@ import static hexlet.code.Engine.checkingAnswers;
 
 public class Prime {
     public static void prime() {
-        Engine.greet();
+        final String messageQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 

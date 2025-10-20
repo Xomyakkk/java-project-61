@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -7,9 +9,9 @@ import static hexlet.code.Engine.checkingAnswers;
 
 public class Calc {
     public static void calc() {
-        Engine.greet();
+        final String messageQuestion = "What is the result of the expression?";
 
-        System.out.println("What is the result of the expression?");
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
