@@ -17,7 +17,8 @@ public final class Utils {
         return generateNumber(DEFAULT_MIN, DEFAULT_MAX);
     }
 
-    public static int generateNumber(int max) {
-        return current().nextInt(0, max + 1);
+    // Используется для случайного выбора length - 1
+    public static int generateIndex(int length) {
+        return current().nextInt(length);
     }
 }
