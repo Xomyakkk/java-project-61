@@ -24,25 +24,29 @@ public final class Calc {
 
             int c = generateNumber(1, 3);
 
-            switch (c) {
-                case 1:
-                    questionsAndAnswers[i][0] = a + " + " + b;
-                    questionsAndAnswers[i][1] = Integer.toString(a + b);
-                    break;
-                case 2:
-                    questionsAndAnswers[i][0] = a + " - " + b;
-                    questionsAndAnswers[i][1] = Integer.toString(a - b);
-                    break;
-                case 3:
-                    questionsAndAnswers[i][0] = a + " * " + b;
-                    questionsAndAnswers[i][1] = Integer.toString(a * b);
-                    break;
-                default:
-                    break;
-            }
+            generateQuestion(a, b, c, questionsAndAnswers[i]);
         }
 
         // Передаем массив с готовыми вопросами и ответами
         checkingAnswers(questionsAndAnswers);
+    }
+
+    private static void generateQuestion(int a, int b, int c, String[] questionsAndAnswers) {
+        switch (c) {
+            case 1:
+                questionsAndAnswers[0] = a + " + " + b;
+                questionsAndAnswers[1] = Integer.toString(a + b);
+                break;
+            case 2:
+                questionsAndAnswers[0] = a + " - " + b;
+                questionsAndAnswers[1] = Integer.toString(a - b);
+                break;
+            case 3:
+                questionsAndAnswers[0] = a + " * " + b;
+                questionsAndAnswers[1] = Integer.toString(a * b);
+                break;
+            default:
+                break;
+        }
     }
 }
