@@ -24,16 +24,18 @@ public final class Gsd {
 
             questionsAndAnswers[i][0] = a + " " + b;
 
-            while (b != 0) {
-                int c = a % b;
-                a = b;
-                b = c;
-            }
-
-            questionsAndAnswers[i][1] = Integer.toString(a);
+            questionsAndAnswers[i][1] = Integer.toString(gcd(a, b));
         }
 
         // Передаем массив с готовыми вопросами и ответами
         checkingAnswers(questionsAndAnswers);
+    }
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int c = a % b;
+            a = b;
+            b = c;
+        }
+        return a;
     }
 }
