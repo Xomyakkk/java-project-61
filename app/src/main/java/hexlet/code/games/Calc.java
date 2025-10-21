@@ -10,6 +10,7 @@ public final class Calc {
     private Calc() { }
 
     public static void calc() {
+        final int numberOfArithmeticExpressions = 3;
         final String messageQuestion = "What is the result of the expression?";
 
         Engine.greet(messageQuestion);
@@ -22,7 +23,7 @@ public final class Calc {
             int a = generateNumber();
             int b = generateNumber();
 
-            int c = generateNumber(1, 3);
+            int c = generateNumber(numberOfArithmeticExpressions);
 
             generateQuestion(a, b, c, questionsAndAnswers[i]);
         }

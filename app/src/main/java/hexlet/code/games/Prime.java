@@ -47,8 +47,13 @@ public final class Prime {
             return false;
         }
 
+        /* Для всех нечетных чисел от 3 до квадратного корня из n:
+        Проверяем, делится ли n на текущее число.
+        Если делится, то число не является простым*
+         */
+        int startNumber = 3;
         int limit = (int) Math.sqrt(number);   // Квадратный корень «снизу»
-        for (int i = 3; i <= limit; i += 2) {
+        for (int i = startNumber; i <= limit; i += 2) {
             if (number % i == 0) {          // Если делится – не простое
                 return false;
             }
