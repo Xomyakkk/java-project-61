@@ -4,13 +4,14 @@ import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class Calc {
     private Calc() { }
 
     public static void calc() {
-        final int numberOfArithmeticExpressions = 3;
+        final String[] expressions = {"+", "-", "*"};
         final String messageQuestion = "What is the result of the expression?";
 
         Engine.greet(messageQuestion);
@@ -23,7 +24,7 @@ public final class Calc {
             int a = generateNumber();
             int b = generateNumber();
 
-            int c = generateNumber(numberOfArithmeticExpressions);
+            String c = expressions[generateIndex(expressions.length)];
 
             generateQuestion(a, b, c, questionsAndAnswers[i]);
         }
@@ -32,17 +33,17 @@ public final class Calc {
         checkingAnswers(questionsAndAnswers);
     }
 
-    private static void generateQuestion(int a, int b, int c, String[] questionsAndAnswers) {
+    private static void generateQuestion(int a, int b, String c, String[] questionsAndAnswers) {
         switch (c) {
-            case 1:
+            case "+":
                 questionsAndAnswers[0] = a + " + " + b;
                 questionsAndAnswers[1] = Integer.toString(a + b);
                 break;
-            case 2:
+            case "-":
                 questionsAndAnswers[0] = a + " - " + b;
                 questionsAndAnswers[1] = Integer.toString(a - b);
                 break;
-            case 3:
+            case "*":
                 questionsAndAnswers[0] = a + " * " + b;
                 questionsAndAnswers[1] = Integer.toString(a * b);
                 break;

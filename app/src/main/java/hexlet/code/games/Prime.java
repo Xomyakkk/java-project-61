@@ -51,7 +51,7 @@ public final class Prime {
         Проверяем, делится ли n на текущее число.
         Если делится, то число не является простым*
          */
-        int startNumber = 3;
+        final int startNumber = 3;
         int limit = (int) Math.sqrt(number);   // Квадратный корень «снизу»
         for (int i = startNumber; i <= limit; i += 2) {
             if (number % i == 0) {          // Если делится – не простое
