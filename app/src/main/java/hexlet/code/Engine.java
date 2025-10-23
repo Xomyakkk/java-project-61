@@ -5,23 +5,23 @@ import java.util.Scanner;
 public final class Engine {
     private Engine() { }
 
-    private static String playerName;
-
     public static final int COUNT_QUESTION = 3;
 
-    public static void greet(String gameQuestion) {
+    public static String greet(String gameQuestion) {
         System.out.println("""
                 Welcome to the Brain Games!
                 May I have your name?""");
 
         Scanner input = new Scanner(System.in);
-        playerName = input.nextLine();
+        String userName = input.nextLine();
 
-        System.out.println("Hello, " + playerName + "!");
+        System.out.println("Hello, " + userName + "!");
         System.out.println(gameQuestion);
+
+        return userName;
     }
 
-    public static void checkingAnswers(String[][] questionsAndAnswers) {
+    public static void checkingAnswers(String userName, String[][] questionsAndAnswers) {
         for (String[] row : questionsAndAnswers) {
             String question = row[0];
             String answer = row[1];
@@ -37,11 +37,11 @@ public final class Engine {
             } else  {
                 System.out.println("'" + playerAnswer + "' " + "is wrong answer ;(. "
                         + "Correct answer was" + " '" + answer + "' \n"
-                        + "Let's try again, " + playerName + "!");
+                        + "Let's try again, " + userName + "!");
                 return;
             }
         }
 
-        System.out.println("Congratulations, " + playerName + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

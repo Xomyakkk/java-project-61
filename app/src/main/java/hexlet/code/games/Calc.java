@@ -13,8 +13,7 @@ public final class Calc {
     public static void calc() {
         final String[] expressions = {"+", "-", "*"};
         final String messageQuestion = "What is the result of the expression?";
-
-        Engine.greet(messageQuestion);
+        String userName = Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -30,7 +29,7 @@ public final class Calc {
         }
 
         // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(questionsAndAnswers);
+        checkingAnswers(userName, questionsAndAnswers);
     }
 
     private static void generateQuestion(int a, int b, String c, String[] questionsAndAnswers) {

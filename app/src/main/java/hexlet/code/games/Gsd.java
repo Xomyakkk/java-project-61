@@ -11,8 +11,7 @@ public final class Gsd {
 
     public static void gcd() {
         final String messageQuestion = "Find the greatest common divisor of given numbers.";
-
-        Engine.greet(messageQuestion);
+        String userName = Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -28,7 +27,7 @@ public final class Gsd {
         }
 
         // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(questionsAndAnswers);
+        checkingAnswers(userName, questionsAndAnswers);
     }
     private static int gcd(int a, int b) {
         while (b != 0) {
