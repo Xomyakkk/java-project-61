@@ -18,7 +18,7 @@ public final class Even {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int randomNumber = generateNumber();
+            int randomNumber = generateNumber(1, 100);
 
             String even = (randomNumber % 2 == 0) ? "yes" : "no";
             String question = Integer.toString(randomNumber);

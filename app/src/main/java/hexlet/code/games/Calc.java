@@ -19,8 +19,8 @@ public final class Calc {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int a = generateNumber();
-            int b = generateNumber();
+            int a = generateNumber(1, 100);
+            int b = generateNumber(1, 100);
             String option = expressions[generateIndex(expressions.length)];
 
             // Строка вопрос

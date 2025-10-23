@@ -18,7 +18,7 @@ public final class Prime {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int randomNumber = generateNumber();
+            int randomNumber = generateNumber(1, 100);
 
             boolean prime = checkingPrime(randomNumber);
 
