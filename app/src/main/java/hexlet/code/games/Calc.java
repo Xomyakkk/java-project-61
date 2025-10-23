@@ -16,38 +16,34 @@ public final class Calc {
         String userName = Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
-
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
             int a = generateNumber();
             int b = generateNumber();
+            String option = expressions[generateIndex(expressions.length)];
 
-            String c = expressions[generateIndex(expressions.length)];
-
-            generateQuestion(a, b, c, questionsAndAnswers[i]);
+            // Строка вопрос
+            questionsAndAnswers[i][0] = createQuestion(a, b, option);
+            // Вычисляем результат и передаем в качестве ответа в виде строки
+            questionsAndAnswers[i][1] = Integer.toString(calculate(a, b, option));
         }
 
         // Передаем массив с готовыми вопросами и ответами
         checkingAnswers(userName, questionsAndAnswers);
     }
 
-    private static void generateQuestion(int a, int b, String c, String[] questionsAndAnswers) {
-        switch (c) {
-            case "+":
-                questionsAndAnswers[0] = a + " + " + b;
-                questionsAndAnswers[1] = Integer.toString(a + b);
-                break;
-            case "-":
-                questionsAndAnswers[0] = a + " - " + b;
-                questionsAndAnswers[1] = Integer.toString(a - b);
-                break;
-            case "*":
-                questionsAndAnswers[0] = a + " * " + b;
-                questionsAndAnswers[1] = Integer.toString(a * b);
-                break;
+    private static String createQuestion(int a, int b, String option) {
+        return a + " " + option + " " + b;
+    }
+
+    private static int calculate(int a, int b, String option) {
+        switch (option) {
+            case "+": return a + b;
+            case "-": return a - b;
+            case "*": return a * b;
             default:
-                break;
+                throw new IllegalArgumentException("Unsupported operator: " + option);
         }
     }
 }
