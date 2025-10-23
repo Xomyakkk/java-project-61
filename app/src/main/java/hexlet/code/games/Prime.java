@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.RandomConfig.MAX_NUMBER;
+import static hexlet.code.util.RandomConfig.MIN_NUMBER;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class Prime {
@@ -18,7 +20,7 @@ public final class Prime {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int randomNumber = generateNumber(1, 100);
+            int randomNumber = generateNumber(MIN_NUMBER, MAX_NUMBER);
 
             boolean prime = checkingPrime(randomNumber);
 

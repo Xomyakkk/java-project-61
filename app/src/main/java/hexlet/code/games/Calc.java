@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.util.RandomConfig.MAX_NUMBER;
+import static hexlet.code.util.RandomConfig.MIN_NUMBER;
 import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
 
@@ -19,8 +21,8 @@ public final class Calc {
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
 
         for (int i = 0; i < COUNT_QUESTION; i++) {
-            int a = generateNumber(1, 100);
-            int b = generateNumber(1, 100);
+            int a = generateNumber(MIN_NUMBER, MAX_NUMBER);
+            int b = generateNumber(MIN_NUMBER, MAX_NUMBER);
             String option = expressions[generateIndex(expressions.length)];
 
             // Строка вопрос
