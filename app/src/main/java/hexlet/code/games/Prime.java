@@ -22,7 +22,7 @@ public final class Prime {
         for (int i = 0; i < COUNT_QUESTION; i++) {
             int randomNumber = generateNumber(MIN_NUMBER, MAX_NUMBER);
 
-            boolean prime = checkingPrime(randomNumber);
+            boolean prime = isPrime(randomNumber);
 
             String question = Integer.toString(randomNumber);
             String answer = (prime) ? "yes" : "no";
@@ -35,7 +35,7 @@ public final class Prime {
         checkingAnswers(userName, questionsAndAnswers);
     }
 
-    private static boolean checkingPrime(int number) {
+    private static boolean isPrime(int number) {
         if (number < 2) {
             return false;
         }
