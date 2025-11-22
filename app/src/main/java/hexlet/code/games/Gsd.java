@@ -7,11 +7,12 @@ import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class Gsd {
+    // Константы класса Минимальное и Максимальное значение
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
     private Gsd() { }
 
     public static void gcd() {
-        final int MIN_NUMBER = 1;
-        final int MAX_NUMBER = 100;
         final String messageQuestion = "Find the greatest common divisor of given numbers.";
         String userName = Engine.greet(messageQuestion);
 

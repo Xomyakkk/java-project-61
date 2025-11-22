@@ -8,11 +8,12 @@ import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class Calc {
+    // Константы класса Минимальное и Максимальное значение
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
     private Calc() { }
 
     public static void calc() {
-        final int MIN_NUMBER = 1;
-        final int MAX_NUMBER = 100;
         final String[] expressions = {"+", "-", "*"};
         final String messageQuestion = "What is the result of the expression?";
         String userName = Engine.greet(messageQuestion);

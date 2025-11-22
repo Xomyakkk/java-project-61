@@ -7,11 +7,12 @@ import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class Even {
+    // Константы класса Минимальное и Максимальное значение
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
     private Even() { }
 
     public static void even() {
-        final int MIN_NUMBER = 1;
-        final int MAX_NUMBER = 100;
         final String messageQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String userName = Engine.greet(messageQuestion);
 
