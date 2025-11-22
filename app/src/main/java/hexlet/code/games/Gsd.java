@@ -4,14 +4,14 @@ import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
-import static hexlet.code.util.RandomConfig.MAX_NUMBER;
-import static hexlet.code.util.RandomConfig.MIN_NUMBER;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class Gsd {
     private Gsd() { }
 
     public static void gcd() {
+        final int MIN_NUMBER = 1;
+        final int MAX_NUMBER = 100;
         final String messageQuestion = "Find the greatest common divisor of given numbers.";
         String userName = Engine.greet(messageQuestion);
 

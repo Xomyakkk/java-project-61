@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUESTION;
 import static hexlet.code.Engine.checkingAnswers;
-import static hexlet.code.util.RandomConfig.MAX_NUMBER;
-import static hexlet.code.util.RandomConfig.MIN_NUMBER;
 import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
 
@@ -13,6 +11,8 @@ public final class Calc {
     private Calc() { }
 
     public static void calc() {
+        final int MIN_NUMBER = 1;
+        final int MAX_NUMBER = 100;
         final String[] expressions = {"+", "-", "*"};
         final String messageQuestion = "What is the result of the expression?";
         String userName = Engine.greet(messageQuestion);
