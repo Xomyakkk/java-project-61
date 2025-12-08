@@ -14,7 +14,7 @@ public final class Prime {
 
     public static void prime() {
         final String messageQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String userName = Engine.greet(messageQuestion);
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -33,7 +33,7 @@ public final class Prime {
         }
 
         // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(userName, questionsAndAnswers);
+        checkingAnswers(questionsAndAnswers);
     }
 
     private static boolean isPrime(int number) {

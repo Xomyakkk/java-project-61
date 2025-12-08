@@ -21,7 +21,7 @@ public final class Progression {
         final int lengthMax  = 10;
         final String messageQuestion = "What number is missing in the progression?";
 
-        String userName = Engine.greet(messageQuestion);
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -44,7 +44,7 @@ public final class Progression {
         }
 
         // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(userName, questionsAndAnswers);
+        checkingAnswers(questionsAndAnswers);
     }
 
     private static String[] getProgression(int start, int length, int step) {

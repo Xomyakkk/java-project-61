@@ -14,7 +14,7 @@ public final class Even {
 
     public static void even() {
         final String messageQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String userName = Engine.greet(messageQuestion);
+        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -31,6 +31,6 @@ public final class Even {
         }
 
         // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(userName, questionsAndAnswers);
+        checkingAnswers(questionsAndAnswers);
     }
 }
