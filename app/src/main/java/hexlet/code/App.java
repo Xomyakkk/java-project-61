@@ -5,7 +5,7 @@ import java.util.Scanner;
 import hexlet.code.games.Even;
 import static hexlet.code.games.Calc.calc;
 import static hexlet.code.games.Cli.greetings;
-import static hexlet.code.games.Gsd.gcd;
+import static hexlet.code.games.GCD.gcd;
 import static hexlet.code.games.Prime.prime;
 import static hexlet.code.games.Progression.progression;
 
