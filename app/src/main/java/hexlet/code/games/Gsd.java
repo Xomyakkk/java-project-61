@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
+import static hexlet.code.Engine.greet;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
@@ -14,7 +13,6 @@ public final class Gsd {
 
     public static void gcd() {
         final String messageQuestion = "Find the greatest common divisor of given numbers.";
-        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -29,8 +27,8 @@ public final class Gsd {
             questionsAndAnswers[i][1] = Integer.toString(gcd(a, b));
         }
 
-        // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(questionsAndAnswers);
+        // Передаем массив с готовыми вопросами и ответами и передаем вопрос
+        checkingAnswers(questionsAndAnswers, greet(messageQuestion));
     }
     private static int gcd(int a, int b) {
         while (b != 0) {

@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
+import static hexlet.code.Engine.greet;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateNumber;
 
@@ -14,7 +13,6 @@ public final class Even {
 
     public static void even() {
         final String messageQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -30,7 +28,7 @@ public final class Even {
             questionsAndAnswers[i][1] = even;
         }
 
-        // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(questionsAndAnswers);
+        // Передаем массив с готовыми вопросами и ответами и передаем вопрос
+        checkingAnswers(questionsAndAnswers, greet(messageQuestion));
     }
 }

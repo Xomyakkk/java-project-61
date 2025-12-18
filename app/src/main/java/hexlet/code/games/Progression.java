@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
+import static hexlet.code.Engine.greet;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
@@ -20,8 +19,6 @@ public final class Progression {
         final int lengthMin  = 6;
         final int lengthMax  = 10;
         final String messageQuestion = "What number is missing in the progression?";
-
-        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
 
@@ -43,8 +40,8 @@ public final class Progression {
             questionsAndAnswers[i][0] = String.join(" ", progression); // Преобразовываем массив в строку с вопросом
         }
 
-        // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(questionsAndAnswers);
+        // Передаем массив с готовыми вопросами и ответами и передаем вопрос
+        checkingAnswers(questionsAndAnswers, greet(messageQuestion));
     }
 
     private static String[] getProgression(int start, int length, int step) {

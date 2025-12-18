@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
 import static hexlet.code.Engine.COUNT_QUESTION;
+import static hexlet.code.Engine.greet;
 import static hexlet.code.Engine.checkingAnswers;
 import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
@@ -16,7 +15,6 @@ public final class Calc {
     public static void calc() {
         final String[] expressions = {"+", "-", "*"};
         final String messageQuestion = "What is the result of the expression?";
-        Engine.greet(messageQuestion);
 
         // Генератор вопросов и ответов
         String[][] questionsAndAnswers = new String[COUNT_QUESTION][2];
@@ -32,8 +30,8 @@ public final class Calc {
             questionsAndAnswers[i][1] = Integer.toString(calculate(a, b, option));
         }
 
-        // Передаем массив с готовыми вопросами и ответами
-        checkingAnswers(questionsAndAnswers);
+        // Передаем массив с готовыми вопросами и ответами и передаем вопрос
+        checkingAnswers(questionsAndAnswers, greet(messageQuestion));
     }
 
     private static String createQuestion(int a, int b, String option) {
