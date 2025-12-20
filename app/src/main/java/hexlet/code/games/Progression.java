@@ -1,8 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.COUNT_QUESTION;
-import static hexlet.code.Engine.greet;
-import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.Engine.*;
 import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
 
@@ -40,8 +38,8 @@ public final class Progression {
             questionsAndAnswers[i][0] = String.join(" ", progression); // Преобразовываем массив в строку с вопросом
         }
 
-        // Передаем массив с готовыми вопросами и ответами и передаем вопрос
-        checkingAnswers(questionsAndAnswers, greet(messageQuestion));
+        // Передаем вопрос игры и массив с вопросами и ответами
+        run(messageQuestion, questionsAndAnswers);
     }
 
     private static String[] getProgression(int start, int length, int step) {

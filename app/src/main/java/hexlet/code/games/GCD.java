@@ -1,8 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.COUNT_QUESTION;
-import static hexlet.code.Engine.greet;
-import static hexlet.code.Engine.checkingAnswers;
+import static hexlet.code.Engine.*;
 import static hexlet.code.util.Utils.generateNumber;
 
 public final class GCD {
@@ -27,8 +25,8 @@ public final class GCD {
             questionsAndAnswers[i][1] = Integer.toString(gcd(a, b));
         }
 
-        // Передаем массив с готовыми вопросами и ответами и передаем вопрос
-        checkingAnswers(questionsAndAnswers, greet(messageQuestion));
+        // Передаем вопрос игры и массив с вопросами и ответами
+        run(messageQuestion, questionsAndAnswers);
     }
     private static int gcd(int a, int b) {
         while (b != 0) {

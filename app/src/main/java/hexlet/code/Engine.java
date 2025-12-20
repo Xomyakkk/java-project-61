@@ -7,28 +7,22 @@ public final class Engine {
 
     public static final int COUNT_QUESTION = 3;
 
-    public static String greet(String gameQuestion) {
-        System.out.println("""
-                Welcome to the Brain Games!
-                May I have your name?""");
+    public static void run(String description, String[][] roundsData) {
+        Scanner scanner = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
-        String userName = input.nextLine();
-
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
-        System.out.println(gameQuestion);
 
-        return userName;
-    }
+        System.out.println(description);
 
-    public static void checkingAnswers(String[][] questionsAndAnswers, String userName) {
-        for (String[] row : questionsAndAnswers) {
+        for (String[] row : roundsData) {
             String question = row[0];
             String answer = row[1];
             System.out.println("Question: " + question);
 
-            Scanner input = new Scanner(System.in);
-            String playerAnswer = input.nextLine();
+            String playerAnswer = scanner.nextLine();
 
             System.out.println("Your answer: " + playerAnswer);
 
