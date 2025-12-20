@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.COUNT_QUESTION;
+import static hexlet.code.Engine.run;
 import static hexlet.code.util.Utils.generateIndex;
 import static hexlet.code.util.Utils.generateNumber;
 
