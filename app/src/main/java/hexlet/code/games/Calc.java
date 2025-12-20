@@ -24,17 +24,13 @@ public final class Calc {
             String option = expressions[generateIndex(expressions.length)];
 
             // Строка вопрос
-            questionsAndAnswers[i][0] = createQuestion(a, b, option);
+            questionsAndAnswers[i][0] = a + " " + option + " " + b;
             // Вычисляем результат и передаем в качестве ответа в виде строки
             questionsAndAnswers[i][1] = Integer.toString(calculate(a, b, option));
         }
 
         // Передаем вопрос игры и массив с вопросами и ответами
         run(messageQuestion, questionsAndAnswers);
-    }
-
-    private static String createQuestion(int a, int b, String option) {
-        return a + " " + option + " " + b;
     }
 
     private static int calculate(int a, int b, String option) {
