@@ -22,7 +22,7 @@ public final class Engine {
             String answer = row[1];
             System.out.println("Question: " + question);
 
-            String playerAnswer = scanner.nextLine();
+            String playerAnswer = scanner.next();
 
             System.out.println("Your answer: " + playerAnswer);
 
